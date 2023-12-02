@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0rem;
+  box-sizing: border-box;
+  --fontSize: 1.35rem;
+  --padding:0.5rem 1rem;
+  --borderRadius: 0.1rem;
+  --border:1px solid rgb(0, 36, 0);
+  --white:#FBFBFB;
+  --neon:#B6E028;
+  --black:#2c2828;
+  --black2:#000000;
+  --grey1:#c2c4c9;
+  --grey2:#9D9D9F;
+  --fontStyle: 'Poppins', sans-serif;
+  font-family: var(--fontStyle);
+}
+body{
+  background-color: var(--grey1);
+}
+body::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+body::-webkit-scrollbar:vertical {
+  width: 11px;
+}
+body::-webkit-scrollbar:horizontal {
+  height: 11px;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid var(--grey2);
+  background-color: var(--neon);
+}
+body::-webkit-scrollbar-track { 
+  background-color:var(--black); 
+  border-radius: 0px; 
+} 
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: unset;
+}
+button{
+  border: none;
+  outline: none;
+}
+@media (max-width: 768px) {
+  html{
+    font-size: 90%;
+  }
+}
+@media (max-width: 700px) {
+  html{
+    font-size: 75%;
+  }
+}
+@media (max-width: 630px) {
+ .headerNavLargeScreen{
+  display: none;
+ }
+}
+@media (min-width: 630px) {
+  .headerNavSmallScreen{
+   display: none;
+  }
+ }
+ 
