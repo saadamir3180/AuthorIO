@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import WorkSpace from './pages/WorkSpace';
 import GetStarted from './pages/GetStarted';
 import HowItWorks from './pages/HowItWorks';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
             <Route path='/HowItWorks' exact element={<HowItWorks/>} />
             <Route path='/WorkSpace' exact element={<WorkSpace/>} />
             <Route path='/GetStarted' exact element={<GetStarted/>} />
+            <Route path='*' exact element={<NotFound/>} />
+            
           </Routes>
       <Footer/>
     </div>

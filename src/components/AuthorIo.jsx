@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 const AuthorIo = () => {
   return (
     <>
-      <Link className="homeLink" to={"/"}>
         <svg
           className="AuthorIO"
           viewBox="0 0 395.52 56.0767798232315"
@@ -25,10 +24,10 @@ const AuthorIo = () => {
                   y="2.062380771428579"
                   fill="#1b2141"
                   opacity="1"
-                  stroke-width="0"
+                  strokeWidth="0"
                   stroke="transparent"
-                  fill-opacity="1"
-                  class="rect-borderrectangle-0"
+                  fillOpacity="1"
+                  className="rect-borderrectangle-0"
                   data-fill-palette-color="primary"
                   rx="1%"
                   id="borderrectangle-0"
@@ -43,10 +42,10 @@ const AuthorIo = () => {
                   y="2.062380771428579"
                   fill="#1b2141"
                   opacity="1"
-                  stroke-width="0"
+                  strokeWidth="0"
                   stroke="transparent"
-                  fill-opacity="1"
-                  class="rect-borderrectangle-1"
+                  fillOpacity="1"
+                  className="rect-borderrectangle-1"
                   data-fill-palette-color="primary"
                   rx="1%"
                   id="borderrectangle-1"
@@ -84,7 +83,7 @@ const AuthorIo = () => {
                                 opacity="1"
                                 transform="matrix(1,0,0,1,0,0)"
                                 fill="#1b2141"
-                                class="wordmark-text-0"
+                                className="wordmark-text-0"
                                 data-fill-palette-color="primary"
                                 id="text-0"
                               ></path>
@@ -106,18 +105,18 @@ const AuthorIo = () => {
                     <svg
                       xmlns:x="http://ns.adobe.com/Extensibility/1.0/"
                       xmlns:i="http://ns.adobe.com/AdobeIllustrator/10.0/"
-                      xmlns:graph="http://ns.adobe.com/Graphs/1.0/"
+                      xmlns-graph="http://ns.adobe.com/Graphs/1.0/"
                       xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
                       version="1.1"
                       x="0"
                       y="0"
                       viewBox="7.5 7.5 49 49"
-                      enable-background="new 0 0 64 64"
-                      xml:space="preserve"
+                      enableBackground="new 0 0 64 64"
+                      xmlSpace="preserve"
                       height="74.21920440000001"
                       width="74.21920440000001"
-                      class="icon-icon-0"
+                      className="icon-icon-0"
                       data-fill-palette-color="accent"
                       id="icon-0"
                     >
@@ -151,10 +150,9 @@ const AuthorIo = () => {
               </g>
             </svg>
           </g>
-          <defs></defs>
         </svg>
-      </Link>
-    </>
+        
+       </>
   );
 };
 

@@ -75,6 +75,7 @@
 }
 .link{
   text-transform: uppercase;
+  font-size: var(--fontSize);
 }
 .link:hover{
   text-shadow: 1px 1px 10px #b5e02879;
@@ -96,6 +97,7 @@
     font-size: calc(var(--fontSize)/1.2);
     color: var(--white);
     background-color: var(--black);
+    font-size: var(--fontSize);
 }
 .navLink:hover{
   background-color: var(--black2);

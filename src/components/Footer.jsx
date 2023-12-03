@@ -4,6 +4,8 @@ import AuthorIo from './AuthorIo';
 const Footer = () => {
   return (
     <footer className='footer'>
+         {/* <Link className="homeLink" to={"/"}>
+      </Link>  */} 
       <section className='footerTop'>
         <div className='footerDet'>
           <a to={'/'} className='aLink'><AuthorIo/></a>

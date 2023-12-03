@@ -14,7 +14,9 @@ const Header = () => {
 
   return (
     <header className="header">
-        <AuthorIo />
+     <Link className="homeLink" to={"/"}>
+      <AuthorIo />
+        </Link>  
       <nav className="headerNavLargeScreen">
         <ul className="navUl">
           <li>
