@@ -22,26 +22,26 @@ const Login = () => {
   }
 
   return (
-      <form className='loginForm' onSubmit={handleSubmit}>
-        <h2 className="text-center">LESCO</h2>
-        <div>
-        <div className="input-container">
-          <input type="text" required onChange={(e)=>{(setUsername(e.target.value))}} value={username} autoComplete="username" aria-label='username'/>
-          <label className="label-n">Username</label>
-        </div>
-        <div className="input-container">
-          <input type="password" required onChange={(e)=>{(setPassword(e.target.value))}} value={password}  autoComplete="current-password" aria-label='password'/>
-          <label className="label-n">Password</label>
-        </div>
-        </div>
-        <span className="buttonsContainer">
+      // <form className='loginForm' onSubmit={handleSubmit}>
+      //   <h2 className="text-center">AuthorIO</h2>
+      //   <div>
+      //   <div className="input-container">
+      //     <input type="text" required onChange={(e)=>{(setUsername(e.target.value))}} value={username} autoComplete="username" aria-label='username'/>
+      //     <label className="label-n">Username</label>
+      //   </div>
+      //   <div className="input-container">
+      //     <input type="password" required onChange={(e)=>{(setPassword(e.target.value))}} value={password}  autoComplete="current-password" aria-label='password'/>
+      //     <label className="label-n">Password</label>
+      //   </div>
+      //   </div>
+      //   <span className="buttonsContainer">
           
-          <button type="submit" className="submitBtn btn">
-          Login
-        </button>
-        </span>
-      </form> 
-      
+      //     <button type="submit" className="submitBtn btn">
+      //     Login
+      //   </button>
+      //   </span>
+      // </form> 
+      <div>hello</div>
   )
 }
 
