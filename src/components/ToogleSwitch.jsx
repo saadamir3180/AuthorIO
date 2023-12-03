@@ -1,5 +1,6 @@
 import React from "react";
-import "../styles/ToogleSwitch.css";
+// import "../styles/ToogleSwitch.css";
+import "../styles/Toggle.css";
 
 const ToogleSwitch = ({ formType, setFormType }) => {
   const handleToggle = () => {
@@ -7,9 +8,10 @@ const ToogleSwitch = ({ formType, setFormType }) => {
   };
   return (
     <div className="button r" id="button-2">
-      <input type="checkbox" className="checkbox" onChange={handleToggle} />
+      {/* <input type="checkbox" className="checkbox" onChange={handleToggle} />
       <div className="knobs"></div>
-      <div className="layer"></div>
+      <div className="layer"></div> */}
+
     </div>
   );
 };

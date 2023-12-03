@@ -3,19 +3,30 @@
     display: block;
     text-align: center;
     color: var(--colorWhite);
+    padding-inline:4vw ;
+}
+.text{
+    padding-inline:6vw ;
+    text-align: center;
+}
+.text > p:last-child{
+    font-size: calc(var(--fontSize)/1.2);
+}
+.text > p > span{
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 600;
 }
 .box{
 	border-radius:3px;
-    justify-content:space-evenly;
-    min-height: 60vh;
-    padding-block: 9vh;
-    margin-inline: auto;
-    background-color: var(--colorDarkGreen);
+    justify-content:space-between;
+    min-height: 80vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 5rem;
+    flex-wrap: wrap;
 }
+
 /* .btnBack{
     margin: 0.5rem;
     font-size: 2rem;
@@ -32,7 +43,6 @@
     text-align: center ;
 }
 .inputCheckboxContainer{
-    padding-inline: 3rem;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -83,23 +93,23 @@
   width:100%;
   padding:8px 0 5px 0;
   font-size:18px;
-  color: var(--colorWhite);
+  color: var(--black2);
 }
 .input-container input:focus{ 
  border:none;	
  outline:none;
- border-bottom:3px solid var(--colorDarkBlue);	
+ border-bottom:3px solid var(--black2);	
 }
 .btn{
 	color:#fff;
-	background-color:var(--colorDarkBlue);
+	background-color:var(--black);
 	outline: none;
     border: 0;
     font-size: 1.1rem;
     align-self: center;
 	padding:10px 20px;
 	text-transform:uppercase;
-	border-radius: var(--borderRadius);
+	border-radius: .3rem;
 	cursor:pointer;
 	position:relative;
     width: clamp(3rem, 27vw, 30vw);
@@ -112,4 +122,31 @@
 }
 .signUpLink{
     color: #6FB555;
+}
+
+
+
+
+
+.boxInfo{
+    width: 47%;
+    min-width: 25rem;
+    height:79vh;
+    margin: auto;
+    border-radius: .5rem;
+    overflow: hidden;
+    object-fit:cover;
+    object-position: bottom;
+    box-shadow: 1px 1px 3px black;
+}
+.form{
+    width: 50%;
+}
+@media (max-width:800px) {
+    .boxInfo{
+        display: none;
+    }
+    .form{
+        width: 100%;
+    }
 }

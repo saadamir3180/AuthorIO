@@ -1,0 +1,5 @@
+.button{
+    border: var(--border);
+    width: 15rem;
+    height: 3rem;
+}

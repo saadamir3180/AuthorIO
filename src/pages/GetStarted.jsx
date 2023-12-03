@@ -2,6 +2,7 @@ import { useState } from 'react';
 import '../styles/GetStarted.css'
 import Login from './../components/Login';
 import SignUp from './../components/SignUp';
+import Img from '../assets/img.jpg'
 import ToogleSwitch from './../components/ToogleSwitch';
 
 const GetStarted = () => {
@@ -11,9 +12,12 @@ const GetStarted = () => {
   return (
     <>
     <div className='box'>
-    <ToogleSwitch formType={formType} setFormType={setFormType}/>
+    {/* <ToogleSwitch formType={formType} setFormType={setFormType}/> */}
+      <img className='boxInfo' src={Img} alt="img"/>
+    {/* <div className='boxInfo'>
+    </div> */}
       {formType === 'login' ?
-      <Login/> :  <SignUp/>
+      <Login formType={formType} setFormType={setFormType} /> :  <SignUp formType={formType} setFormType={setFormType} />
       }
     </div>
     </>
