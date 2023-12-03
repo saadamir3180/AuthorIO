@@ -3,8 +3,14 @@ import '../styles/Svg.css'
 import '../styles/Home.css'
 import Circle from './../components/Circle';
 import ZigZag from './../components/ZigZag';
+import { motion } from 'framer-motion';
 const Home = () => {
   return (
+    <motion.div className="box"
+    initial={{opacity:0}}
+    animate={{opacity:1}}
+    exit={{opacity:0}}
+    >
     <div className='homeContainer'>
         <h1 className='homeh1'> AI Empowered <br/>Authorship Redefined</h1>
 
@@ -15,6 +21,7 @@ const Home = () => {
       <div className='svg svgCircle'><Circle/></div>
 
     </div>
+    </motion.div>
   )
 }
 
