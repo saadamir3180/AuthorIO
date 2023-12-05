@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.container .ql-editor{
+    width: 80vw;
+    height: 60rem;
+    padding: 2rem;
+    margin-inline: auto;
+    margin-block: 3rem 7rem;
+    box-shadow: 0 0 5px 0 rgba(0,0,0, 0.5);
+    background-color: var(--white);
+}
+.container .ql-toolbar.ql-snow{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--grey2);
+    border: none;
+    box-shadow: 0 0 5px 0 rgba(0,0,0, 0.5);
+}

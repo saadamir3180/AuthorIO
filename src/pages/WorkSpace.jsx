@@ -1,6 +1,6 @@
 import '../styles/Page.css'
 import { motion } from 'framer-motion'
-
+import TextEditor from '../components/TextEditor'
 const WorkSpace = () => {
   return (
     <motion.div className="box page"
@@ -8,7 +8,7 @@ const WorkSpace = () => {
     animate={{opacity:1}}
     exit={{opacity:0}}
     >
-    <div className='page'>WorkSpace</div>
+    <TextEditor/>
     </motion.div>
   )
 }
