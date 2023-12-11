@@ -1,0 +1,35 @@
+.popularBooksContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+    
+    background-color: var(--black);
+    padding: 3rem 2rem;
+    border-radius: var(--borderRadius);
+    margin: 5% 4%;
+
+}
+.book{
+    width: 22%;
+    height: 30rem;
+    border-radius: var(--borderRadius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+
+}
+.bookImage{
+    width: 100%;
+    height: 85%;
+    object-fit:cover;
+    background-color: var(--grey2);
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    border: 3px solid var(--grey2);
+    border-radius: var(--borderRadius);
+}
+.bookImage:hover{
+    scale: 101%;
+}

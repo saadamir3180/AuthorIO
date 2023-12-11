@@ -20,8 +20,7 @@ const GetStarted = () => {
     <div className='box'>
     {/* <ToogleSwitch formType={formType} setFormType={setFormType}/> */}
       <img className='boxInfo' src={Img} alt="img"/>
-    {/* <div className='boxInfo'>
-    </div> */}
+
       {formType === 'login' ?
       <Login formType={formType} setFormType={setFormType} /> :  <SignUp formType={formType} setFormType={setFormType} />
       }

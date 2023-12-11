@@ -6,6 +6,7 @@ import ZigZag from "./../components/ZigZag";
 import { motion } from "framer-motion";
 import SearchBooks from "../components/SearchBooks";
 import Dots from '../components/Dots.jsx'
+import PopularBooks from "../components/PopularBooks.jsx";
 
 const Home = () => {
   return (
@@ -17,12 +18,12 @@ const Home = () => {
     >
       <div className="homeContainer">
         <h1 className="homeh1">
-          {" "}
           AI Empowered <br />
           Authorship Redefined
         </h1>
         <SearchBooks />
-        <div className="svg svgZigZag">
+        <PopularBooks/>
+        <div className="svg svgZigZag shadowNeon">
           <ZigZag />
         </div>
         <div className="svg svgCircle">

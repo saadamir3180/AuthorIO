@@ -16,6 +16,8 @@
     transform: rotate(270deg);
 }
 .svgDots{
-    top: 55vh;
+    top: 53vh;
     right: 3vw;
+    z-index: 1;
+    scale: 80%;
 }
