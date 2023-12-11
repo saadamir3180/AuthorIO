@@ -4,7 +4,7 @@ import '../styles/Home.css'
 import Circle from './../components/Circle';
 import ZigZag from './../components/ZigZag';
 import { motion } from 'framer-motion';
-import SearchBar from '../components/SearchBAr';
+import SearchBar from '../components/SearchBar';
 const Home = () => {
   return (
     <motion.div className="box"
