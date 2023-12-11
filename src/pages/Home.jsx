@@ -5,7 +5,7 @@ import Circle from "./../components/Circle";
 import ZigZag from "./../components/ZigZag";
 import { motion } from "framer-motion";
 import SearchBooks from "../components/SearchBooks";
-import Dots from "../components/Dots";
+import Dots from './../components/Dots';
 
 const Home = () => {
   return (
@@ -22,7 +22,6 @@ const Home = () => {
           Authorship Redefined
         </h1>
         <SearchBooks />
-
         <div className="svg svgZigZag">
           <ZigZag />
         </div>
