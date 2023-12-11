@@ -39,9 +39,6 @@ const TextEditor = () => {
         }
     })
 
-    // useEffect(()=>{
-    //     new Quill('#Editor', { theme : 'snow' })
-    // },[])
 
   return (
     <div className='container' ref={wrapperRef}></div>

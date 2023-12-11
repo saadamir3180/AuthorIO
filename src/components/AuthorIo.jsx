@@ -1,4 +1,5 @@
 import "../styles/AuthorIO.css";
+import '../styles/Svg.css'
 import { Link } from 'react-router-dom'
 
 const AuthorIo = () => {
@@ -22,12 +23,12 @@ const AuthorIo = () => {
                   height="70.09444285714285"
                   x="411.9852892457143"
                   y="2.062380771428579"
-                  fill="#1b2141"
+                  fill="#B6E028"
                   opacity="1"
                   strokeWidth="0"
                   stroke="transparent"
                   fillOpacity="1"
-                  className="rect-borderrectangle-0"
+                  className="rect-borderrectangle-0 shadow"
                   data-fill-palette-color="primary"
                   rx="1%"
                   id="borderrectangle-0"
@@ -40,12 +41,12 @@ const AuthorIo = () => {
                   height="70.09444285714285"
                   x="426.5076743604343"
                   y="2.062380771428579"
-                  fill="#1b2141"
+                  fill="#B6E028"
                   opacity="1"
                   strokeWidth="0"
                   stroke="transparent"
                   fillOpacity="1"
-                  className="rect-borderrectangle-1"
+                  className="rect-borderrectangle-1 shadow"
                   data-fill-palette-color="primary"
                   rx="1%"
                   id="borderrectangle-1"

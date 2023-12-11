@@ -27,7 +27,7 @@ const Login = ({ formType, setFormType }) => {
 
   return (
       <form className='loginForm form' onSubmit={handleSubmit}>
-        <span className='text'> 
+        <span className='text'>
         <h2 className="text-center">Welcome Back</h2>
         <p>We persistently strive to elevate and refine your experience, fostering innovation and collaboration for heightened satisfaction and convenience</p>
         <p >Not a User? <span onClick={handleToggle}>SignUp here</span></p>
