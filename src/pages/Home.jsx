@@ -4,7 +4,7 @@ import '../styles/Home.css'
 import Circle from './../components/Circle';
 import ZigZag from './../components/ZigZag';
 import { motion } from 'framer-motion';
-import SearchBar from '../components/SearchBar';
+import SearchBar from './../components/SearchBar';
 const Home = () => {
   return (
     <motion.div className="box"
@@ -15,6 +15,7 @@ const Home = () => {
     <div className='homeContainer'>
         <h1 className='homeh1'> AI Empowered <br/>Authorship Redefined</h1>
 
+        {/* <SearchBar/> */}
         <SearchBar/>
 
       <div className='svg svgZigZag'><ZigZag/></div>
