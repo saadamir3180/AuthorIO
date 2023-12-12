@@ -69,6 +69,7 @@
     justify-content: space-around;
     padding-block: 15rem;
     align-items: center;
+    z-index: 2;
 }
 .headerNavSmallScreen > .navUl li{
     transform: translateX(-50%);

@@ -8,6 +8,8 @@ import WorkSpace from './pages/WorkSpace';
 import GetStarted from './pages/GetStarted';
 import HowItWorks from './pages/HowItWorks';
 import NotFound from './pages/NotFound';
+import ELibrary from './pages/ELibrary';
+import User from './pages/User';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
             <Route path='/HowItWorks' exact element={<HowItWorks/>} />
             <Route path='/WorkSpace' exact element={<WorkSpace/>} />
             <Route path='/GetStarted' exact element={<GetStarted/>} />
+            <Route path='/ELibrary' exact element={<ELibrary/>} />
+            <Route path='/user/:email' exact element={<User/>} />
             <Route path='*' exact element={<NotFound/>} />
             
           </Routes>

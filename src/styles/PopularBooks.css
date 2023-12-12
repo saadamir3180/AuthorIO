@@ -3,25 +3,25 @@
     flex-direction: row;
     align-items: center;
     justify-content:space-evenly;
-    
     background-color: var(--black);
     padding: 3rem 2rem;
     border-radius: var(--borderRadius);
     margin: 5% 4%;
+    flex-wrap: wrap;
 
 }
 .book{
-    width: 22%;
+    width: 19rem;
     height: 30rem;
     border-radius: var(--borderRadius);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content:space-between;
-
+    margin-block: 1rem;
 }
 .bookImage{
-    width: 100%;
+    min-width: 10rem;
     height: 85%;
     object-fit:cover;
     background-color: var(--grey2);

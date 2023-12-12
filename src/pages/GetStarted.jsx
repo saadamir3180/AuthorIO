@@ -3,7 +3,6 @@ import '../styles/GetStarted.css'
 import Login from './../components/Login';
 import SignUp from './../components/SignUp';
 import Img from '../assets/img.jpg'
-import ToogleSwitch from './../components/ToogleSwitch';
 import { motion } from 'framer-motion'
 
 const GetStarted = () => {

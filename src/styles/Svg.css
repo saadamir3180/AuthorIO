@@ -21,3 +21,10 @@
     z-index: 1;
     scale: 80%;
 }
+@media (max-width: 500px) {
+    .svgDots{
+        right: -3vw;
+        z-index: 1;
+        scale: 50%;
+    }
+}

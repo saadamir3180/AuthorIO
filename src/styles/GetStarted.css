@@ -28,6 +28,7 @@
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
+    padding-block: 1rem;
 }
 
 /* .btnBack{
@@ -152,4 +153,39 @@
     .form{
         width: 100%;
     }
+}
+.message{
+    position: absolute;
+    background-color: var(--grey2);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3vh;
+    top: 50vh;
+    left:50vw;
+    transform: translate(-50%, 0%);
+    width: clamp(20rem, 30vw, 35vw);
+    padding: var(--padding);
+    border: var(--borderNeon);
+    border-radius: var(--borderRadius);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.218);
+}
+.message button{
+    width: 5rem;
+    height: 1.5rem;
+    text-align: center;
+    padding: 0.1rem 1rem;
+    border: var(--border);
+    border-radius: var(--borderRadius);
+
+}
+
+.error{
+    color: red;
+    background-color: aliceblue;
+    text-align: center;
+    display: block;
+    position: absolute;
+    left: 80vw;
+    top: 10vh;
 }

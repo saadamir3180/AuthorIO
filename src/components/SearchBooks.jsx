@@ -12,7 +12,7 @@ const SearchBooks = () => {
       >
         <input type="text" id="searchBooks" placeholder="Search Books" required/>
         <button type="submit">
-          <i className="fa-solid fa-magnifying-glass"></i>Search
+          <i className="fa-solid fa-magnifying-glass"></i><p>Search</p>
         </button>
       </form>
     </div>

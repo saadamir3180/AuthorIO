@@ -69,4 +69,12 @@ button{
    display: none;
   }
  }
- 
+ @media (max-width: 500px) {
+  html{
+    font-size: 70%;
+    --fontSize:1rem !important; 
+  }
+  .homeh1{
+    font-size: calc(var(--fontSize)*2.25);
+  }
+}
