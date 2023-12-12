@@ -6,6 +6,19 @@
 .shadow{
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.075)); 
 }
+.svgBlock{
+    top: 5vh;
+    right: 2vw;
+}
+.svgCube{
+    top: 0vh;
+    left: -5vw;
+}
+.svgHalfCircle{
+    top: 65vh;
+    right: -2vw;
+    transform: rotate(-45deg);
+}
 .svgCircle{
     top: 45vh;
     left: -5vw;
