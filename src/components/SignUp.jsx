@@ -87,7 +87,7 @@ const SignUp = ( { formType, setFormType } ) => {
     </button>
     {/* } */}
     </span>
-    {!resetEmailSent && (
+    {resetEmailSent && (
         <div className="message">
           <p>Verification Email sent. Check your inbox & then Login</p>
           <button onClick={()=>{setResetEmailSent(!resetEmailSent);navigate('/GetStarted')}}>ok</button>

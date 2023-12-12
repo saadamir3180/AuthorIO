@@ -5,6 +5,7 @@ import { auth } from '../firebaseConfig';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import SignUp from './SignUp';
 import { useNavigate } from 'react-router-dom';
+import Loading from './Loading';
 
 const Login = ({ formType, setFormType }) => {
   const navigate = useNavigate();
@@ -29,8 +30,8 @@ const Login = ({ formType, setFormType }) => {
       .catch((error) => {
         console.log(error);
         setTimeout(()=>{
-          setMessage(true);
-        }, 3000)
+          setMessage(false);
+        }, 1000)
         setPassword('');
       });
   };
@@ -48,6 +49,7 @@ const Login = ({ formType, setFormType }) => {
   }, [message]);
 
   return (
+    <>
     <form className='loginForm form' onSubmit={handleSubmit}>
       <span className='text'>
         <h2 className="text-center">Welcome Back</h2>
@@ -62,7 +64,7 @@ const Login = ({ formType, setFormType }) => {
         </div>
         <div className="input-container">
           <input type="password" required onChange={(e) => { setPassword(e.target.value) }} value={password} autoComplete="current-password" aria-label='password' />
-          <label className={message ? 'error' : 'label-n'}>Password</label>
+          <label className={`label-n`}>Password</label>
         </div>
       </div>
       <span className="buttonsContainer">
@@ -71,6 +73,8 @@ const Login = ({ formType, setFormType }) => {
         </button>
       </span>
     </form>
+    </>
+
   );
 }
 

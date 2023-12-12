@@ -27,7 +27,7 @@ const Header = () => {
               How It Works
             </Link>
           </li>
-          { user && user.emailVerified ? 
+          { user && user.emailVerified ?
           <li>
             <Link className="link" to="/WorkSpace">
               WorkSpace
@@ -39,12 +39,21 @@ const Header = () => {
           </Link>
         </li>
            
-          
+          {!user ? 
           <li >
             <Link className="navLink navButton link" to="/GetStarted">
               Get Started
             </Link>
           </li>
+          :
+          
+          <li >
+            <Link className="navLink navButton link" to={`/user/${user.uid}`}>
+              {user.displayName}
+            </Link>
+          </li>
+
+}
         </ul>
       </nav>
 
@@ -75,7 +84,7 @@ const Header = () => {
             E-Library
           </Link>
         </li>
-            
+            {!user ? 
               <li>
                 <Link
                   className="navLink navButton link"
@@ -85,6 +94,18 @@ const Header = () => {
                   Get Started
                 </Link>
               </li>
+              :
+               
+              <li>
+                <Link
+                  className="navLink navButton link"
+                  to={`/user/${user.uid}`}
+                  onClick={handleCheckboxChange}
+                >
+                  {user.displayName}
+                </Link>
+              </li>
+              }
           </ul>
         </label>
       </nav>

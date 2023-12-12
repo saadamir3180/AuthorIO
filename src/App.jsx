@@ -16,6 +16,7 @@ function App() {
     <Router>
     <div className='App'>
       <Header/>
+            <div className='fullPage'>
           <Routes>
             <Route path='/' exact element={<Home/>} />
             <Route path='/HowItWorks' exact element={<HowItWorks/>} />
@@ -24,8 +25,8 @@ function App() {
             <Route path='/ELibrary' exact element={<ELibrary/>} />
             <Route path='/user/:email' exact element={<User/>} />
             <Route path='*' exact element={<NotFound/>} />
-            
           </Routes>
+          </div>
       <Footer/>
     </div>
     </Router>

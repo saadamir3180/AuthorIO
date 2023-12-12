@@ -1,0 +1,9 @@
+.blog{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.blog section{
+    width: 80vw;
+    margin-inline: auto;
+}
