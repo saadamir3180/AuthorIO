@@ -7,7 +7,7 @@ import SignUp from './SignUp';
 import { useNavigate } from 'react-router-dom';
 import Loading from './Loading';
 
-const Login = ({ formType, setFormType }) => {
+const Login = ({ formType, setFormType, loader, setLoader }) => {
   const navigate = useNavigate();
   const handleToggle = () => {
     setFormType(formType === "signup" ? "login" : "signup");
@@ -15,38 +15,40 @@ const Login = ({ formType, setFormType }) => {
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [message, setMessage] = useState(true);
+  const [message, setMessage] = useState('');
   const [user, loading] = useAuthState(auth);
 
   const handleSubmit = async (e) => {
+    setLoader(true)
     e.preventDefault();
 
     await signInWithEmailAndPassword(auth, username, password)
       .then(() => {
         setUsername('');
         setPassword('');
+        setLoader(false)
         navigate(`/user/${auth.currentUser.email}`);
       })
       .catch((error) => {
-        console.log(error);
-        setTimeout(()=>{
-          setMessage(false);
-        }, 1000)
+        setLoader(false)
+          setMessage('csd');
+          console.log(message);
+        setUsername('');
         setPassword('');
       });
   };
 
   // Use useEffect to clear the message after a delay
-  useEffect(() => {
-    if (message) {
-      const timeoutId = setTimeout(() => {
-        setMessage(null);
-      }, 4000);
+  // useEffect(() => {
+  //   if (message) {
+  //     const timeoutId = setTimeout(() => {
+  //       setMessage(null);
+  //     }, 4000);
 
-      // Cleanup the timeout to avoid memory leaks
-      return () => clearTimeout(timeoutId);
-    }
-  }, [message]);
+  //     // Cleanup the timeout to avoid memory leaks
+  //     return () => clearTimeout(timeoutId);
+  //   }
+  // }, [message]);
 
   return (
     <>
@@ -55,6 +57,7 @@ const Login = ({ formType, setFormType }) => {
         <h2 className="text-center">Welcome Back</h2>
         <p>We persistently strive to elevate and refine your experience, fostering innovation and collaboration for heightened satisfaction and convenience</p>
         <p>Not a User? <span onClick={handleToggle}>SignUp here</span></p>
+        {/* <p className='error'>{message.message}hell</p>  */}
       </span>
       <div>
         {user && user.admin ? 'admin' : null}

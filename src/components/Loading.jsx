@@ -1,8 +1,15 @@
 import React from "react";
 import '../styles/Loading.css'
+import { motion } from "framer-motion";
 
 const Loading = () => {
   return (
+    
+    <motion.div className="box"
+    initial={{opacity:0}}
+    animate={{opacity:1}}
+    exit={{opacity:0}}
+    >
     <div className="loader">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -127,6 +134,7 @@ const Loading = () => {
         </g>
       </svg>
     </div>
+    </motion.div>
   );
 };
 

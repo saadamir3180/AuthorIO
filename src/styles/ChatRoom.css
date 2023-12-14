@@ -1,0 +1,93 @@
+.chatRoom{
+    position: absolute;
+    right: 0;
+    width: 25vw;
+    height: 80vh;
+    background-color: var(--grey2);
+    border: var(--border);
+    border-radius: var(--borderRadius);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.chatRoom section{
+    width: 100%;
+    text-align: center;
+    background-color: grey;
+    padding: var(--padding);
+}
+.chatRoom .chat{
+    height: 90%;
+    background-color: var(--grey1);
+    padding: var(--padding);
+}
+.sent , .recieved{
+    width: fit-content;
+    background-color: var(--grey2);
+    border: var(--border);
+    border-radius: 1rem;
+    padding: var(--padding);
+    margin: 0.5rem 0.3rem;
+}
+.sent{
+    margin-left: auto;
+}   
+
+
+
+.searchBar2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: var(--padding);
+    --width:22.8rem;
+    width: var(--width);
+    margin: 1.5% 3%;
+    border: var(--border);
+    background-color: var(--white);
+    border-radius: var(--borderRadius);
+    font-size: calc(var(--fontSize)/1.3);
+}
+.searchBar2 input{
+    width: calc(var(--width)*75/100);
+    height: calc(var(--width)/14);
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: calc(var(--fontSize)/1.3);
+    margin-block: auto;
+}
+.searchBar2 button{
+    width: calc(var(--width)*16/100);
+    min-width: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    color: var(--white);
+    background-color: var(--black);
+    scale: 120%;
+    padding: 0.4rem;
+    border-radius: var(--borderRadius);
+}
+@media (max-width: 500px) {
+    .searchBar2{
+        --width:25rem;
+    }
+}
+@media (max-width: 415px) {
+    .searchBar2{
+        --width:70vw;
+    }
+    .searchBar2 button  :nth-child(2){
+        display: none;
+    }
+    
+    .searchBar2 button{
+        min-width: unset;
+        width: fit-content;
+    }
+}

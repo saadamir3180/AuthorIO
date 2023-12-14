@@ -1,6 +1,8 @@
 import './styles/App.css'
-import AuthorIO from './components/AuthorIo'
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Loading from './components/Loading';
+import { auth } from './firebaseConfig';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import Header from './components/Header'
 import Home from './pages/Home'
 import Footer from './components/Footer'
@@ -12,9 +14,13 @@ import ELibrary from './pages/ELibrary';
 import User from './pages/User';
 
 function App() {
-  return (
+
+  const [ loading, user ] = useAuthState(auth)
+   return (
     <Router>
     <div className='App'>
+            {loading || !user ? 
+            <>
       <Header/>
             <div className='fullPage'>
           <Routes>
@@ -25,9 +31,12 @@ function App() {
             <Route path='/ELibrary' exact element={<ELibrary/>} />
             <Route path='/user/:email' exact element={<User/>} />
             <Route path='*' exact element={<NotFound/>} />
+              
           </Routes>
           </div>
       <Footer/>
+      </>:<Loading/>
+    }
     </div>
     </Router>
   )

@@ -3,11 +3,12 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebaseConfig";
 import { motion } from "framer-motion";
 import Img1 from "../assets/book2.jpg";
+import { useNavigate } from "react-router-dom";
 import "../styles/User.css";
 
 const User = () => {
   const [user] = useAuthState(auth);
-
+  const navigate = useNavigate()
   const documents = [
     {
       name: "Document 1",
@@ -36,6 +37,7 @@ const User = () => {
   ];
 
   const handleLogout = () => {
+    navigate('/')
     auth.signOut();
   };
 
@@ -45,8 +47,9 @@ const User = () => {
     animate={{opacity:1}}
     exit={{opacity:0}}
     >
-    <div className="userProfile">
       {user && (
+    <div className="userProfile">
+      
         <div className="profileInfo">
           <img src={user.photoURL} alt="Profile" />
           {user.photoURL == null ? (
@@ -62,7 +65,7 @@ const User = () => {
           <p>{user.email}</p>
           <button onClick={handleLogout}>Logout</button>
         </div>
-      )}
+      
       <div className="border shadow"></div>
       <div className="documentContainer">
         <h1>My Documents</h1>
@@ -72,16 +75,17 @@ const User = () => {
               <img src={document.imageUrl} alt={`Document ${index + 1}`} />
               <strong>{document.name}</strong>
               <p>Last Edited: {document.lastEdited}</p>
-              <p>
-                <b>By: {document.editor}</b>
-              </p>
+                
+                <span><b>By: {document.editor}</b><i className="fa-solid fa-share-nodes"></i><i className="fa-solid fa-download"></i></span>
             </li>
           ))}
+          <li className="lastLi"><i className="fa-solid fa-plus"></i></li>
         </ul>
       </div>
-    </div>
+    </div>)}
     </motion.div>
   );
 };
 
 export default User;
+

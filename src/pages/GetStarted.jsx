@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../styles/GetStarted.css'
 import Login from './../components/Login';
 import SignUp from './../components/SignUp';
@@ -11,11 +11,15 @@ import Loading from '../components/Loading';
 const GetStarted = () => {
   
   const [formType, setFormType] = useState('login')
-  const [ user, loading ] = useAuthState(auth)
-
+  const [loader, setLoader] = useState(false);
+  const [ user, loading, error ] = useAuthState(auth)
+  useEffect(()=>{
+    console.log(loading)
+  }, [error])
   return (
     <>
-    { !loading ? 
+    
+    {loading || loader ? <Loading/> :
     <motion.div className="box"
     initial={{opacity:0}}
     animate={{opacity:1}}
@@ -26,12 +30,11 @@ const GetStarted = () => {
       <img className='boxInfo' src={Img} alt="img"/>
 
       {formType === 'login' ?
-      <Login formType={formType} setFormType={setFormType} /> :  <SignUp formType={formType} setFormType={setFormType} />
+      <Login formType={formType} setFormType={setFormType} loader={loader} setLoader={setLoader}/> :  <SignUp formType={formType} setFormType={setFormType} />
       }
     </div>
     </motion.div>
-    : 
-    <Loading/>}
+}
     </>
   )
 }

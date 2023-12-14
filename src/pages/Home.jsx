@@ -7,8 +7,18 @@ import { motion } from "framer-motion";
 import SearchBooks from "../components/SearchBooks";
 import Dots from '../components/Dots.jsx'
 import PopularBooks from "../components/PopularBooks.jsx";
+import Img1 from "../assets/book1.jpg";
+import Img2 from "../assets/book2.jpg";
+import Img3 from "../assets/book3.jpg";
+import Img4 from "../assets/book4.jpg";
 
 const Home = () => {
+  const booksData = [
+    { id: 1, title: "Meditations", author: "Marcus Arelius", image: Img1 },
+    { id: 2, title: "12 Rules for Life", author: "Jordan B. Peterson", image: Img2 },
+    { id: 3, title: "A Mirrored Life", author: "The Rumi Novel", image: Img3 },
+    { id: 4, title: "The Forty Rules of Love", author: "Elif Shafak", image: Img4 },
+  ];
   return (
     <motion.div
       className="box"
@@ -22,7 +32,7 @@ const Home = () => {
           Authorship Redefined
         </h1>
         <SearchBooks />
-        <PopularBooks/>
+        <PopularBooks booksData={booksData}/>
         <div className="svg svgZigZag shadowNeon">
           <ZigZag />
         </div>
