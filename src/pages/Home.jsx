@@ -4,6 +4,7 @@ import "../styles/Home.css";
 import Circle from "./../components/Circle";
 import ZigZag from "./../components/ZigZag";
 import { motion } from "framer-motion";
+import gsap from 'gsap'
 import SearchBooks from "../components/SearchBooks";
 import Dots from '../components/Dots.jsx'
 import PopularBooks from "../components/PopularBooks.jsx";
@@ -19,6 +20,11 @@ const Home = () => {
     { id: 3, title: "A Mirrored Life", author: "The Rumi Novel", image: Img3 },
     { id: 4, title: "The Forty Rules of Love", author: "Elif Shafak", image: Img4 },
   ];
+
+  React.useEffect(() => {
+    gsap.from(".homeh1, .searchBar, .popularBooksContainer", { duration: 2, y: "30%" , ease: "ease", opacity: 0,  delay: 1});
+  }, []); // Empty dependency array to run the effect only once when the component mounts
+  
   return (
     <motion.div
       className="box"

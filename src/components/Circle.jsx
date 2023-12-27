@@ -7,11 +7,11 @@ const Circle = () => {
   
 const icon = {
   hidden: {
-    strokeDasharray: "0 1000", 
+    strokeDasharray: "1000", 
     strokeDashoffset: "1000",
   },
   visible: {
-    strokeDasharray: "1000 1000",
+    strokeDasharray: "1000",
     strokeDashoffset: "0",
   },
 };
@@ -21,15 +21,15 @@ const icon = {
     <svg height="350" width="350">
       <motion.circle
         cx="130"
-        cy="150"
-        r="135"
+        cy="160"
+        r="145"
         stroke="var(--neon)"
-        strokeWidth="13"
+        strokeWidth="20"
         fill="transparent"
         initial="hidden"
         animate="visible"
         transition={{
-          default: { duration: 4, ease: "easeInOut" },
+          default: { duration: 1, ease: "easeOut" },
         }}
         // style={{ overflow: "visible" }}
         variants={icon}
